@@ -1,0 +1,24 @@
+{% extends "gestion_legajo/base.html" %}
+
+{% block title %}Panel de Administrador{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Bienvenido al Panel de Administrador</h1>
+<p>Aquí puedes gestionar usuarios, asignar cursos, cargar feedback, y más.</p>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h5 class="card-title">Gestión de Usuarios</h5>
+        <p class="card-text">Crear, modificar y eliminar usuarios del sistema.</p>
+        <a href="#" class="btn btn-primary">Administrar Usuarios</a>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <h5 class="card-title">Gestión de Cursos</h5>
+        <p class="card-text">Registrar nuevos cursos, asignar docentes, y definir modalidades.</p>
+        <a href="#" class="btn btn-primary">Administrar Cursos</a>
+    </div>
+</div>
+{% endblock %}
