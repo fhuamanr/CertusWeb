@@ -7,7 +7,7 @@ class CustomUser(AbstractUser):
         ('DOC', 'Docente'),
         ('ALU', 'Alumno')
     )
-    role = models.CharField(max_length=5, choices=ROLE_CHOICES)
+    role = models.CharField(max_length=5, choices=ROLE_CHOICES, default='ALU')
 class Docente(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     costo_por_hora = models.DecimalField(max_digits=5, decimal_places=2)

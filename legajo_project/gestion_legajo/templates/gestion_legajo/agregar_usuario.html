@@ -1,0 +1,17 @@
+{% extends "gestion_legajo/base.html" %}
+
+{% block title %}Agregar Usuario{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">Agregar Usuario</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.as_p }}  <!-- El campo 'role' se incluye automáticamente desde el formulario -->
+        </div>
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <a href="{% url 'gestion_usuarios' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

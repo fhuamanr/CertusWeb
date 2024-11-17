@@ -1,0 +1,40 @@
+{% extends "gestion_legajo/base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1 class="mt-5">Bienvenido a la Plataforma de Gestión de Legajos</h1>
+    <p class="mt-3">Gestión eficiente de información docente, cursos y estudiantes.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Acceso Administrador</h5>
+                    <p class="card-text">Gestiona usuarios, cursos y horarios.</p>
+                    <a href="{% url 'admin_dashboard' %}" class="btn btn-primary">Ir al Panel</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Acceso Docente</h5>
+                    <p class="card-text">Consulta tus cursos, horas trabajadas y asistencia.</p>
+                    <a href="{% url 'docente_dashboard' %}" class="btn btn-primary">Ir al Panel</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Acceso Alumno</h5>
+                    <p class="card-text">Revisa tus notas, asistencias y cursos matriculados.</p>
+                    <a href="{% url 'alumno_dashboard' %}" class="btn btn-primary">Ir al Panel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

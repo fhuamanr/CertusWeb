@@ -10,7 +10,7 @@
     <div class="card-body">
         <h5 class="card-title">Gestión de Usuarios</h5>
         <p class="card-text">Crear, modificar y eliminar usuarios del sistema.</p>
-        <a href="#" class="btn btn-primary">Administrar Usuarios</a>
+        <a href="{% url 'gestion_usuarios' %}" class="btn btn-primary">Administrar Usuarios</a>
     </div>
 </div>
 
@@ -18,7 +18,7 @@
     <div class="card-body">
         <h5 class="card-title">Gestión de Cursos</h5>
         <p class="card-text">Registrar nuevos cursos, asignar docentes, y definir modalidades.</p>
-        <a href="#" class="btn btn-primary">Administrar Cursos</a>
+        <a href="{% url 'gestion_cursos' %}" class="btn btn-primary">Administrar Cursos</a>
     </div>
 </div>
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends "gestion_legajo/base.html" %}
+
+{% block title %}Gestión de Cursos{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4">Gestión de Cursos</h1>
+    <a href="{% url 'agregar_curso' %}" class="btn btn-success mb-3">Agregar Curso</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Contenido</th>
+                <th>Modalidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for curso in cursos %}
+            <tr>
+                <td>{{ curso.id }}</td>
+                <td>{{ curso.nombre }}</td>
+                <td>{{ curso.contenido|truncatechars:50 }}</td>
+                <td>{{ curso.modalidad }}</td>
+                <td>
+                    <a href="#" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

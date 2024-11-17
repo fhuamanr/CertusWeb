@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'legajo_docente',
         'USER': 'avnadmin',
         'PASSWORD': 'AVNS_Q-aVBLKXxxhyjXouLrH',
-        'HOST': 'pg-2cbc4d1-portalcertusfhr.l.aivencloud.com',
-        'PORT': '24741',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
